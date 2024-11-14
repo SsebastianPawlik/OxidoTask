@@ -11,15 +11,18 @@ Tworzenie podglądu artykułu w pliku podglad.html na podstawie szablonu szablon
 
 Instalacja
 1. Sklonuj repozytorium:
-   git clone [<URL-repozytorium>](https://github.com/SsebastianPawlik/OxidoTask.git)
-   cd <nazwa-folderu>
-2. Zainstaluj zależności:
+   git clone https://github.com/SsebastianPawlik/OxidoTask.git
+2. Użyj komendy: cd OxidoTask
+3. Zainstaluj zależności:
    pip install -r requirements.txt
-3. Utwórz plik .env z kluczem do API OpenAI:
+4. Utwórz w folderze OxidoTask plik .env z kluczem do API OpenAI:
    OPENAI_API_KEY=Twój_klucz_API
 
 Użycie
 Uruchom aplikację używając poniższego polecenia w terminalu:
+python main.py
+
+Domyślnie aplikacja odczyta artykuł z artykul.txt, wygeneruje HTML w artykul.html, użyje szablonu z szablon.html i zapisze podgląd w podglad.html. Możesz również przekazać niestandardowe ścieżki plików:
 python main.py --article ścieżka/do/artykul.txt --output_html artykul.html --template szablon.html --preview podglad.html
 
 Argumenty
